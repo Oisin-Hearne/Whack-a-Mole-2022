@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Whac_A_MoleG00405249.MainPage">
+
+    <!-- 
+    G00405249 Oisin Hearne
+    
+    Citations:
+    Background Image - Assembled using Super Mario World tilesets & fonts, from the Spriters Resource https://www.spriters-resource.com/snes/smarioworld/.
+    Moles - Original Sprites from Super Mario World, but recreated from scratch to fit into boxes correctly and look okay.
+    
+    -->
+
+    <Grid BackgroundColor="#89cce8">
+        <Image Source="bg_wide.png" Aspect="AspectFill"
+               HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+
+
+        <StackLayout Orientation="Vertical">
+
+
+            <!-- Score and Time Box-->
+            <Frame IsVisible="True" HorizontalOptions="End" VerticalOptions="Start" Background="Black" CornerRadius="10" Opacity="0.8">
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Vertical" Margin="5">
+                        <Label Text="Score"
+                       TextColor="White" FontAttributes="Bold" TextDecorations="Underline" FontSize="Body"/>
+                        <Label x:Name="LblScore" Text="000"
+                       TextColor="White" FontAttributes="Bold" FontSize="Body"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Margin="5">
+                        <Label Text="Time"
+                       TextColor="White" FontAttributes="Bold" TextDecorations="Underline" FontSize="Body"/>
+                        <Label x:Name="LblTime" Text="100"
+                       TextColor="White" FontAttributes="Bold" FontSize="Body"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <!-- Only visible when first opened, used later in between restarts to display final score -->
+            <Frame IsVisible="True" x:Name="InstructionBox"
+               HorizontalOptions="Center" VerticalOptions="Center" 
+               BackgroundColor="Black" CornerRadius="10" Opacity="0.8">
+                <Label x:Name="LblInstruction" Text="Select a mode, then press Start to begin!" TextColor="White" FontAttributes="Bold" FontSize="Medium"></Label>
+            </Frame>
+
+            <!-- Game Grids, invisible at start. -->
+
+            <Grid x:Name="Game3x3" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <Grid x:Name="Game5x5" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="True">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+
+            <!-- Start Button & Radio Buttons-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End" Margin="20">
+
+                <Button x:Name="Btn_Start" Text="Start" Clicked="Btn_Start_Clicked"
+                   BackgroundColor="Green" CornerRadius="10" Opacity="0.8" FontSize="Medium" WidthRequest="150"
+                    FontAttributes="Bold"/>
+
+                <Frame Background="Black" CornerRadius="10" Opacity="0.8">
+                    <StackLayout Orientation="Vertical">
+                        <RadioButton Content="3x3 Grid" IsChecked="True" x:Name="Rad3x3"
+                                 TextColor="White" FontAttributes="Bold"/>
+                        <RadioButton Content="5x5 Grid" x:Name="Rad5x5"
+                                 TextColor="White" FontAttributes="Bold"/>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

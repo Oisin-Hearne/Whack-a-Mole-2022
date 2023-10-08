@@ -1,0 +1,4 @@
+C:\Users\oisin\OneDrive - Atlantic TU\AppDevelopment\Whac-A-MoleG00405249\Whac-A-MoleG00405249\Whac-A-MoleG00405249.Android\obj\Debug\110\MonoAndroid,Version=v11.0.AssemblyAttributes.cs
+C:\Users\oisin\OneDrive - Atlantic TU\AppDevelopment\Whac-A-MoleG00405249\Whac-A-MoleG00405249\Whac-A-MoleG00405249.Android\obj\Debug\110\build.props
+C:\Users\oisin\OneDrive - Atlantic TU\AppDevelopment\Whac-A-MoleG00405249\Whac-A-MoleG00405249\Whac-A-MoleG00405249.Android\obj\Debug\110\adb.props
+C:\Users\oisin\OneDrive - Atlantic TU\AppDevelopment\Whac-A-MoleG00405249\Whac-A-MoleG00405249\Whac-A-MoleG00405249.Android\obj\Debug\110\Whac-A-MoleG00405249.Android.csproj.AssemblyReference.cache
